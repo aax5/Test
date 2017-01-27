@@ -1,3 +1,4 @@
+!/usr/bin/env python
 import re
 PdbData = "2w0x  2.12  2009  IC50=625uM    // 2w0x.pdf (PD2) compound 4" #in here should go the line that is fed in from the data
 f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
