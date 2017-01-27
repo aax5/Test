@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env pythonhttps://github.com/aax5/Test
 import re
 PdbData = "2w0x  2.12  2009  IC50=625uM    // 2w0x.pdf (PD2) compound 4" #in here should go the line that is fed in from the data
 f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
@@ -12,7 +12,7 @@ txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
 for line in f:
 #line is now string of single line in f
-  if line[0] != "#"
+  if line[0] != "#":
     
     words = line.split()
     print words
