@@ -10,7 +10,7 @@ restOfData = ""
 #
 txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
-for line in f
+for line in f:
 #line is now string of single line in f
   words = line.split()
   proteinName = words[0]
