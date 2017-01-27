@@ -13,6 +13,7 @@ txtLength = 0 #how long the file should be
 for line in f:
 #line is now string of single line in f
   words = line.split()
+  print words
   proteinName = words[0]
   restOfData = words[3]
   #finds the proteinName and the part of data with binding affinities
