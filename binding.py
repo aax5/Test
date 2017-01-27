@@ -20,7 +20,7 @@ for line in f:
     restOfData = words[3]
     #finds the proteinName and the part of data with binding affinities
 
-    match = re.search(r'(\S+)=(\d+.?\d*)(\SM)', PdbData)
+    match = re.search(r'(\S+)=(\d+.?\d*)(\SM)', restOfData)
     """matches types: group(1) matches the nonspace chars before the "=", group(2) matches the numerical chars
     and ".", and group(3) matches the nonspace chars after those numbers  """
   
@@ -41,7 +41,7 @@ for line in f:
         endNum = float(baseNum)*0.000000000001
     else:
         endNum = -1
-    endString += proteinName + "" + source + " " + str(endNum) + "\n"
+    endString += proteinName + " " + source + " " + str(endNum) + "\n"
     # converts from whatever measurement type given to M and saves it as an int, endNum
 out = open('/home/aaz24/output.txt','w')
 out.write(endString)
