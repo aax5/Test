@@ -28,8 +28,10 @@ for line in f:
     #gives prefix before data
     baseNum = match.group(2)
     #gives baseNum before unit conversion
+    print baseNum
     measurementValue = match.group(3)
     #gives measurement unit
+    print measurementValue
   
     if (measurementValue == "mM"):
         endNum = float(baseNum)*0.001    
