@@ -39,5 +39,5 @@ for line in f
         endNum = -1
   endString += source + " " + baseNum + " " + measurementValue + "\n"
     # converts from whatever measurement type given to M and saves it as an int, endNum
-out = open('output.txt','w')
+out = open('/home/aaz24/output.txt','w')
 out.write(endString)
