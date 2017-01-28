@@ -51,8 +51,8 @@ for counter, line in enumerate(f,  1):
         out.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
         #prints to text file
     else:
-        print "Error: Not \"=\"" + line + " " + counter
+        print "Error: Not \"=\"" + " " + str(counter) +  line 
   else:
-     print "commentated file" + " " + counter
+     print "commentated file" + " " + str(counter) + line
 out = open('/home/aaz24/output.txt','w')
 
