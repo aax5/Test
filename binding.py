@@ -12,6 +12,7 @@ restOfData = ""
 txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
 for line, value in enumerate(f,  1):
+  print line
 #line is now string of single line in f
   if line[0] != "#":
     
