@@ -54,8 +54,9 @@ for counter, line in enumerate(f,  1):
         out.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
         #prints to text file
     else:
-        print "Error: Not \"=\"" + " " + str(counter) +  line 
+        print "Error: Not \"=\"" + " " + str(counter) + " " +  line
+        counter++
   else:
-     print "commentated file" + " " + str(counter) + line
-
+     print "commentated file" + " " + str(counter) + line      
+print "Number of files without \"=\" " +  counter
 
