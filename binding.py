@@ -59,5 +59,5 @@ for counter, line in enumerate(f,  1):
         newCounter+= 1
   else:
      print "commentated file" + " " + str(counter) + line      
-print "Number of files without \"=\" " +  newCounter
+print "Number of files without \"=\" " +  str(newCounter)
 
