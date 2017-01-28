@@ -24,7 +24,7 @@ for counter, line in enumerate(f,  1):
     restOfData = words[3]
     #finds the proteinName and the part of data with binding affinities
 
-    match = re.search(r'(\S+)[~=](\d+.?\d*)(\SM)', restOfData)
+    match = re.search(r'(\S+&&^<>)[~=](\d+.?\d*)(\SM)', restOfData)
     """matches types: group(1) matches the nonspace chars before the "=", group(2) matches the numerical chars
     and ".", and group(3) matches the nonspace chars after those numbers  """
     if(match):
