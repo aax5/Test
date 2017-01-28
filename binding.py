@@ -13,7 +13,7 @@ out = open('/home/aaz24/output.txt','w')
 txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
 for counter, line in enumerate(f,  1):
-  print line
+  #print line
 #line is now string of single line in f
   if line[0] != "#":
     
@@ -44,6 +44,8 @@ for counter, line in enumerate(f,  1):
             endNum = float(baseNum)*(1e-9)  
         elif (measurementValue == "pM"):
             endNum = float(baseNum)*(1e-12)
+        elif (measurementValue == "fM):
+            endNum = float(baseNum)*(1e-15)
         else:
             endNum = -1
         # converts from whatever measurement type given to M and saves it as an int, endNum    
