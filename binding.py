@@ -11,7 +11,7 @@ restOfData = ""
 #
 txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
-for line, value in enumerate(f,  1):
+for counter, line in enumerate(f,  1):
   print line
 #line is now string of single line in f
   if line[0] != "#":
@@ -51,8 +51,8 @@ for line, value in enumerate(f,  1):
         out.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
         #prints to text file
     else:
-        print "Error: Not \"=\"" + line + " " + value
+        print "Error: Not \"=\"" + line + " " + counter
   else:
-     print "commentated file" + " " + value
+     print "commentated file" + " " + counter
 out = open('/home/aaz24/output.txt','w')
 
