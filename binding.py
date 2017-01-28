@@ -8,7 +8,8 @@ length = 0
 proteinName = "" #name of the protein
 
 restOfData = ""
-#
+out = open('/home/aaz24/output.txt','w')
+#creates output file
 txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
 for counter, line in enumerate(f,  1):
@@ -54,5 +55,5 @@ for counter, line in enumerate(f,  1):
         print "Error: Not \"=\"" + " " + str(counter) +  line 
   else:
      print "commentated file" + " " + str(counter) + line
-out = open('/home/aaz24/output.txt','w')
+
 
