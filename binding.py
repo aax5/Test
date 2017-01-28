@@ -44,7 +44,7 @@ for counter, line in enumerate(f,  1):
             endNum = float(baseNum)*(1e-9)  
         elif (measurementValue == "pM"):
             endNum = float(baseNum)*(1e-12)
-        elif (measurementValue == "fM):
+        elif (measurementValue == "fM"):
             endNum = float(baseNum)*(1e-15)
         else:
             endNum = -1
