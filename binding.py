@@ -12,6 +12,7 @@ out = open('/home/aaz24/output.txt','w')
 #creates output file
 txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
+newCounter = 0
 for counter, line in enumerate(f,  1):
   #print line
 #line is now string of single line in f
@@ -55,8 +56,8 @@ for counter, line in enumerate(f,  1):
         #prints to text file
     else:
         print "Error: Not \"=\"" + " " + str(counter) + " " +  line
-        counter++
+        newCounter+= 1
   else:
      print "commentated file" + " " + str(counter) + line      
-print "Number of files without \"=\" " +  counter
+print "Number of files without \"=\" " +  newCounter
 
