@@ -7,8 +7,8 @@ parser = argparse.ArgumentParser(description = "Files to be used")
 parser.add_argument("-i", "--input", help = "input file")
 parser.add_argument("-o", "--output", help = "output file")
 args = parser.parse_args()
-with open(args.input) as file: 
-  f = open(file)
+f = open(args.input)
+
 #print f
 #f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
 #test string
