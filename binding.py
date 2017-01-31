@@ -1,14 +1,22 @@
 #!/usr/bin/env pythonhttps://github.com/aax5/Test
 import re
 import math
+import argparse
 #PdbData = "2w0x  2.12  2009  IC50=625uM    // 2w0x.pdf (PD2) compound 4" #in here should go the line that is fed in from the data
-f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
+parser = argparse.ArgumentParse(description = "Files to be used")
+parser.add_argument("-i")
+inputArgs = parser.parse_args()
+with open(inputArgs.txt) as file: 
+  f = file.read()
+parser.add_argument("-o")
+outputArgs = parser.parse_args()
+#f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
 #test string
 length = 0
 proteinName = "" #name of the protein
 
 restOfData = ""
-out = open('/home/aaz24/output.txt','w')
+#out = open('/home/aaz24/output.txt','w')
 #creates output file
 txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
@@ -52,8 +60,9 @@ for counter, line in enumerate(f,  1):
         # converts from whatever measurement type given to M and saves it as an int, endNum    
         affinityValue = -math.log10(endNum)
         #finds -log10 value of endNum
-        out.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
-        #prints to text file
+        with open(outputArgs.txt) as file
+          file.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
+          #prints to text file
     else:
         print "Error: Not \"=\"" + " " + str(counter) + " " +  line
         newCounter+= 1
