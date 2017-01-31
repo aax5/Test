@@ -24,7 +24,7 @@ newCounter = 0
 for counter, line in enumerate(f,  1):
   print line
 #line is now string of single line in f
-  if " " and "#" not in line[0]:
+  if "#" not in line[0]:
     
     words = line.split()
     print words
