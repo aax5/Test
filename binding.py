@@ -60,7 +60,7 @@ for counter, line in enumerate(f,  1):
         # converts from whatever measurement type given to M and saves it as an int, endNum    
         affinityValue = -math.log10(endNum)
         #finds -log10 value of endNum
-        with open(outputArgs.txt) as file
+        with open(outputArgs.txt) as file:
           file.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
           #prints to text file
     else:
