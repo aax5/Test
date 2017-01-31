@@ -8,7 +8,7 @@ parser.add_argument("-i", "--input", help = "input file")
 parser.add_argument("-o", "--output", help = "output file")
 args = parser.parse_args()
 f = open(args.input)
-
+outputFile = open(args.output)
 #print f
 #f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
 #test string
@@ -60,9 +60,9 @@ for counter, line in enumerate(f,  1):
         # converts from whatever measurement type given to M and saves it as an int, endNum    
         affinityValue = -math.log10(endNum)
         #finds -log10 value of endNum
-        with open(args.output) as file:
-          file.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
-          #prints to text file
+        
+        outputFile.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
+        #prints to text file
     else:
         print "Error: Not \"=\"" + " " + str(counter) + " " +  line
         newCounter+= 1
