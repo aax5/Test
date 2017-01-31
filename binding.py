@@ -25,9 +25,9 @@ for counter, line in enumerate(f,  1):
 
 #line is now string of single line in f
   if line[0] != "#":
-    print line 
+    #print line 
     words = line.split()
-    print words
+    #print words
     proteinName = words[0]
     restOfData = words[3]
     #finds the proteinName and the part of data with binding affinities
