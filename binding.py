@@ -5,11 +5,11 @@ import argparse
 #PdbData = "2w0x  2.12  2009  IC50=625uM    // 2w0x.pdf (PD2) compound 4" #in here should go the line that is fed in from the data
 parser = argparse.ArgumentParser(description = "Files to be used")
 parser.add_argument("-i", help = "input file")
-inputArgs = parser.parse_args()
+inputArgs = parser.parse_args("-i")
 with open(inputArgs.txt) as file: 
   f = file.read()
 parser.add_argument("-o", help = "output file")
-outputArgs = parser.parse_args()
+outputArgs = parser.parse_args("-o")
 #f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
 #test string
 length = 0
