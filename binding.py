@@ -9,7 +9,7 @@ parser.add_argument("-o", "--output", help = "output file")
 args = parser.parse_args()
 with open(args.input) as file: 
   f = file.read()
-print f
+#print f
 #f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
 #test string
 length = 0
@@ -22,7 +22,7 @@ txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
 newCounter = 0
 for counter, line in enumerate(f,  1):
-  #print line
+  print line
 #line is now string of single line in f
   if line[0] != "#":
     
