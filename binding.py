@@ -22,10 +22,10 @@ txtLength = 0 #how long the file should be
 #for txtLength in xrange(len(PdbData))
 newCounter = 0
 for counter, line in enumerate(f,  1):
-  print line
+
 #line is now string of single line in f
   if "#" not in line[0]:
-    
+    print line 
     words = line.split()
     print words
     proteinName = words[0]
