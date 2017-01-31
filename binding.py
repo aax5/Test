@@ -9,7 +9,7 @@ parser.add_argument("-o", "--output", help = "output file")
 args = parser.parse_args()
 with open(args.input) as file: 
   f = file.read()
-
+print f
 #f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
 #test string
 length = 0
