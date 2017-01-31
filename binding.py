@@ -3,7 +3,7 @@ import re
 import math
 import argparse
 #PdbData = "2w0x  2.12  2009  IC50=625uM    // 2w0x.pdf (PD2) compound 4" #in here should go the line that is fed in from the data
-parser = argparse.ArgumentParse(description = "Files to be used")
+parser = argparse.ArgumentParser(description = "Files to be used")
 parser.add_argument("-i")
 inputArgs = parser.parse_args()
 with open(inputArgs.txt) as file: 
