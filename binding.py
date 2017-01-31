@@ -4,12 +4,12 @@ import math
 import argparse
 #PdbData = "2w0x  2.12  2009  IC50=625uM    // 2w0x.pdf (PD2) compound 4" #in here should go the line that is fed in from the data
 parser = argparse.ArgumentParser(description = "Files to be used")
-parser.add_argument("-i", help = "input file")
-inputArgs = parser.parse_args("-i")
-with open(inputArgs.txt) as file: 
+parser.add_argument("-i", "--input", help = "input file")
+parser.add_argument("-o", "--output", help = "output file")
+args = parser.parse_args()
+with open(args.input) as file: 
   f = file.read()
-parser.add_argument("-o", help = "output file")
-outputArgs = parser.parse_args("-o")
+
 #f = open('/home/dkoes/PDBbind/index/INDEX_general_PL.2016')
 #test string
 length = 0
@@ -60,7 +60,7 @@ for counter, line in enumerate(f,  1):
         # converts from whatever measurement type given to M and saves it as an int, endNum    
         affinityValue = -math.log10(endNum)
         #finds -log10 value of endNum
-        with open(outputArgs.txt) as file:
+        with open(args.output) as file:
           file.write(proteinName + " " + source + " " + str(affinityValue) + "\n")
           #prints to text file
     else:
