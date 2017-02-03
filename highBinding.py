@@ -9,4 +9,4 @@ outputFile = open(args.output, 'w')
 for line in f:
   words=line.split()
   if(float(words[2] > 5)
-     outputfile.write(line)
+     outputFile.write(line)
