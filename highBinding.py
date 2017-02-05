@@ -1,12 +1,23 @@
-import argparse
-#PdbData = "2w0x  2.12  2009  IC50=625uM    // 2w0x.pdf (PD2) compound 4" #in here should go the line that is fed in from the data
-parser = argparse.ArgumentParser(description = "Files to be used")
-parser.add_argument("-i", "--input", help = "input file")
-parser.add_argument("-o", "--output", help = "output file")
-args = parser.parse_args()
-f = open(args.input)
-outputFile = open(args.output, 'w')
+import sys, re
+
+if len(sys.argv) != 3:
+    print "Need train file and affinities dictionary"
+    sys.exit(1)
+
+f = open(sys.argv[1])
+
+affs = dict()
+for line in open(sys.argv[2]):
+  #get dictionary, sets all proteins in second file in dict
+    (pdb,_,a) = line.split()
+    affs[pdb] = float(a)
+
 for line in f:
-  words=line.split()
-  if(float(words[2]) > 5):
-     outputFile.write(line)
+    vals = line.split()
+    m = re.search(r'(\w+)_rec', vals[1])
+    if m:
+        pdb = m.group(1)
+        if a > 7 and pdb in affs:
+          print line
+    else:
+        sys.stderr.write("Problem with: %s\n" % line)
