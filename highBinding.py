@@ -17,7 +17,7 @@ for line in f:
     m = re.search(r'(\w+)_rec', vals[1])
     if m:
         pdb = m.group(1)
-        if a > 4 and pdb in affs:
+        if a > 3 and pdb in affs:
           print line
     else:
         sys.stderr.write("Problem with: %s\n" % line)
