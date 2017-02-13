@@ -17,7 +17,7 @@ for line in f:
     m = re.search(r'(\w+)_rec', vals[1])
     if m:
         print pdb + _ + str(a)
-        if pdb in affs
+        if pdb in affs:
             a = affs[pdb]
             pdb = m.group(1)
         
