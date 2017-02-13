@@ -17,7 +17,7 @@ for line in f:
     m = re.search(r'(\w+)_rec', vals[1])
     if m:
         pdb = m.group(1)
-        a = affs[a]
+        a = affs[pdb]
         if a > 2 and pdb in affs:
           print line.rstrip()
     else:
