@@ -17,11 +17,11 @@ for line in f:
     m = re.search(r'(\w+)_rec', vals[1])
     if m:
         print pdb + _ + str(a)
-
-        a = affs[pdb]
-        pdb = m.group(1)
+        if pdb in affs
+            a = affs[pdb]
+            pdb = m.group(1)
         
-        if a > 2 and pdb in affs:
-          print line.rstrip()
+            if a > 2:
+                print line.rstrip()
     else:
         sys.stderr.write("Problem with: %s\n" % line)
