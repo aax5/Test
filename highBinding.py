@@ -16,9 +16,9 @@ for line in f:
     vals = line.split()
     m = re.search(r'(\w+)_rec', vals[1])
     if m:
-        print pdb + _ + str(a)
+        #print pdb + _ + str(a)
         if pdb in affs:
-            #a = affs[pdb]
+            a = affs[pdb]
             pdb = m.group(1)
         
             if a > 2:
