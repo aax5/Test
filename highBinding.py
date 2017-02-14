@@ -18,8 +18,9 @@ for line in f:
     if m:
         #print pdb + _ + str(a)
         if pdb in affs:
-            a = affs[pdb]
             pdb = m.group(1)
+            a = affs[pdb]
+            
         
             if a > 2:
                 print line.rstrip()
