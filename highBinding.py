@@ -23,9 +23,9 @@ for line in f:
             a = affs[pdb]
             
         
-            if a > 3:
+            if a < 3:
                 #print line.rstrip()
-            else:
-              print line.rstrip()
+            
+                
     else:
         sys.stderr.write("Problem with: %s\n" % line)
