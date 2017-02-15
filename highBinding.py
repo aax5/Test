@@ -19,7 +19,7 @@ for line in f:
       #print pdb + _ + str(a)
       pdb = m.group(1)
       if pdb in affs:
-      a = affs[pdb]
+        a = affs[pdb]
         if a < 3:
                 #print line.rstrip()
 
