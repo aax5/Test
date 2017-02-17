@@ -20,7 +20,7 @@ for line in f:
       pdb = m.group(1)
       if pdb in affs:
         a = affs[pdb]
-        if a > 5:
+        if a > 6:
            print line.rstrip()
 
   else:
