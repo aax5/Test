@@ -6,7 +6,7 @@ for line in open(sys.argv[1]):
   match = re.search(r'/\w+/', vals[1])
   if match:
     print match.group()
-    match.group() = name
+    name = match.group()
     proteins[name] = proteins[entries] + 1
     
   else:
