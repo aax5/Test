@@ -3,7 +3,7 @@ import sys, re
 proteins = dict()
 for line in open(sys.argv[1]):
   vals = line.split()
-  match = re.search(r'/w+/', vals[1])
+  match = re.search(r'\w+/', vals[1])
   if match:
     print match.group()
     name = match.group()
@@ -14,7 +14,7 @@ for line in open(sys.argv[1]):
     
 for line in open(sys.argv[1]):
   vals = line.split()
-  match = re.search(r'/\w+/', vals[1])
+  match = re.search(r'\w+/', vals[1])
   if match:
     if match.group() in proteins:
       proteins[match.group()] += 1
