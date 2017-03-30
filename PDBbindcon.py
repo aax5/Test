@@ -20,3 +20,4 @@ for line in open(sys.argv[1]):
       proteins[match.group()] += 1
       
 print proteins 
+print len(proteins)
