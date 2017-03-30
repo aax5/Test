@@ -34,4 +34,4 @@ for line in open(sys.argv[1]):
   if match:
     #print match.group()
     if match.group() in randProteins:
-      print line
+      print line.rstrip()
