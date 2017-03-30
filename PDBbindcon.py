@@ -5,7 +5,7 @@ for line in open(sys.argv[1]):
   vals = line.split()
   match = re.search(r'\w+/', vals[1])
   if match:
-    print match.group()
+    #print match.group()
     name = match.group()
     proteins[name] = 0
     
@@ -19,8 +19,8 @@ for line in open(sys.argv[1]):
     if match.group() in proteins:
       proteins[match.group()] += 1
       
-print proteins 
-print len(proteins)
+#print proteins 
+#print len(proteins)
 randProteins = dict()
 x = (sys.argv[2])
 for i in range (0,int(x)): 
@@ -32,6 +32,6 @@ for line in open(sys.argv[1]):
   vals = line.split()
   match = re.search(r'\w+/', vals[1])
   if match:
-    print match.group()
+    #print match.group()
     if match.group() in randProteins:
       print line
