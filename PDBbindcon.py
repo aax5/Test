@@ -1,4 +1,4 @@
-import system, re
+import sys, re
 
 for line in open(sys.argv[1]):
   vals = line.split()
