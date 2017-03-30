@@ -7,7 +7,7 @@ for line in open(sys.argv[1]):
   if match:
     print match.group()
     name = match.group()
-    proteins[name] = 0
+    proteins[name]++
     
   else:
     print 'error'
