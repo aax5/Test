@@ -2,7 +2,7 @@ import sys, reversed
 affs = dict
 for line in open(sys.argv[1]):
   (x, name) = line.split()
-  match = re.search.(r'(\/+/\w+)'), name)
+  match = re.search(r'(\/+/\w+)'), name)
     if match:
       print match.group
     else:
