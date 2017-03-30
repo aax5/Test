@@ -1,4 +1,4 @@
-import sys, re
+import sys, re, random
 
 proteins = dict()
 for line in open(sys.argv[1]):
@@ -21,3 +21,15 @@ for line in open(sys.argv[1]):
       
 print proteins 
 print len(proteins)
+randProteins = dict()
+x = (sys.argv[2])
+for x: 
+  name, val = random.choice(list(proteins.items()))
+  randProteins[name] = val
+for line in open(sys.argv[1]):
+  vals = line.split
+  match = re.search(r'\w+/', vals[1])
+  if match:
+    print match.group()
+    if match.group() in randProteins:
+      print line
