@@ -17,7 +17,9 @@ for line in open(sys.argv[1]):
   vals = line.split()
   match = re.search(r'/\w+/', vals[1])
   if match:
-    proteins[name]+=1
+    if match.group() in proteins:
+      proteins[match.group()] += 1
+      
 print proteins 
   
   
