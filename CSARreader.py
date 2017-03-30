@@ -1,7 +1,7 @@
 import sys
 affs = dict
 for line in open(sys.argv[1]):
-  (x, name) = line.split()
+  (x, name, a, b, c, d) = line.split()
   match = re.search(r'(\/+/\)', name)
   if match:
     print match.group
