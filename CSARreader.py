@@ -1,4 +1,4 @@
-
+import sys, re
 affs = dict
 for line in open(sys.argv[1]):
   vals = line.split()
