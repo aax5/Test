@@ -1,5 +1,5 @@
 import sys, re
-proteins = dict
+proteins = dict()
 for line in open(sys.argv[1]):
   vals = line.split()
   match = re.search(r'/\w+/', vals[1])
