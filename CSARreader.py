@@ -1,4 +1,4 @@
-import sys, reversed
+import sys
 affs = dict
 for line in open(sys.argv[1]):
   (x, name) = line.split()
