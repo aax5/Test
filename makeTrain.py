@@ -18,4 +18,4 @@ for counter in range(0,int(x)):
     dir2 = "/home/dkoes/PDBbind/refined-set/new" + str(files) + "pdbtrain" + str(newcounter) + ".types"
 
     cmd1 = ("shuf -n " + str(files) + " "  + dir1 + " > " + dir2)
-
+    os.system(cmd1)
