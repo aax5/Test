@@ -2,7 +2,7 @@ import os, sys
 
 
 x = sys.argv[1]
-multiplier = sys.argv[1]
+multiplier = sys.argv[2]
 """for counter in range(0,int(x)):
   
   os.system(cmd1)"""
