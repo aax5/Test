@@ -2,11 +2,12 @@ import os, sys
 
 
 x = sys.argv[1]
+multiplier = sys.argv[1]
 """for counter in range(0,int(x)):
   
   os.system(cmd1)"""
 for counter in range(0,int(x)):
-  files = int(counter)*1000
+  files = int(counter)*int(multiplier)
   for newcounter in range(0,3):
     
     dir1 = "/home/dkoes/PDBbind/refined-set/pdbbindtest" + str(newcounter) + ".types"
